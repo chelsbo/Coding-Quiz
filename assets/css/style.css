@@ -1,0 +1,37 @@
+h1 {
+    font-size: 18px;
+    text-align: left;
+    color: rgb(77, 3, 77);
+}
+/* Will not allow timer to sit on right side of screen */ 
+#timer {
+float: right;}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: purple;
+}
+p {font-size: 20px;
+text-align: center;
+color: purple;}
+button {
+margin-left: 300px;
+}
+
+#color-box {
+    text-align: center;
+    background-color: rgb(210, 174, 243);
+    height: 100px;
+    width: 400px;
+    margin-left: 400px;
+}
+
+button {
+    margin-left: 700x;
+}
+
+header {
+    background-color: rgb(251, 157, 251);
+    display: block;
+}
