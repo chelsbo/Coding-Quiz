@@ -1,8 +1,8 @@
 let startBtn = document.getElementById('start-quiz')
-// button.onclick = myFunction;
-startBtn.addEventListener("click", run);
-
 startBtn.onclick = myFunction;
+// startBtn.addEventListener("click", run);
+
+// startBtn.onclick = myFunction;
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
