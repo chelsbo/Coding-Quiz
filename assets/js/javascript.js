@@ -1,28 +1,6 @@
-let startBtn = document.getElementById('start-quiz')
-// startBtn.onclick = myFunction;
-startBtn.addEventListener("click", generateQuiz);
-
-// startBtn.onclick = myFunction;
-
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
-	function showQuestions(questions, quizContainer){
-		// code will go here
-    //    question:  "What is ?"
-	}
-
-	function showResults(questions, quizContainer, resultsContainer){
-		// code will go here
-	}
-
-	// show the questions
-	showQuestions(questions, quizContainer);
-
-	// when user clicks submit, show results
-	// submitButton.click = function(){
-		showResults(questions, quizContainer, resultsContainer);
-	}
-// }
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
 
 var myQuestions = [
 	{
@@ -45,41 +23,106 @@ var myQuestions = [
 	}
 ];
 
+let startBtn = document.getElementById('start-quiz')
+// startBtn.onclick = myFunction;
+startBtn.addEventListener("click", generateQuiz);
+
+// startBtn.onclick = myFunction;
+
+// function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+	// function showQuestions(questions, quizContainer){
+	// 	// code will go here
+    //    questions.identifyText = "What is ?"
+    // //    quizContainer.
+	
+
+	// function showResults(questions, quizContainer, resultsContainer){
+	// 	// code will go here
+	// }
+
+	// // show the questions
+	showQuestions(questions, quizContainer);
+
+	// when user clicks submit, show results
+	// submitButton.click = function(){
+		showResults(questions, quizContainer, resultsContainer);
+	
+
+
+
 function showQuestions(questions, quizContainer){
 	// we'll need a place to store the output and the answer choices
-	var output = [];
-	var answers;
+	// var output = [];
+	// var answers;
 
-	// for each question...
-	for(var i=0; i<questions.length; i++){
+	// // for each question...
+	// for(var i=0; i<questions.length; i++){
 		
-		// first reset the list of answers
-		answers = [];
+	// 	// first reset the list of answers
+	// 	answers = [];
 
-		// for each available answer to this question...
-		for(letter in questions[i].answers){
+	// 	// for each available answer to this question...
+	// 	for(letter in questions[i].answers){
 
-			// ...add an html radio button
-			answers.push(
-				'<label>'
-					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
-					+ letter + ': '
-					+ questions[i].answers[letter]
-				+ '</label>'
-			);
-		}
+	// 		// ...add an html radio button
+	// 		answers.push(
+	// 			'<label>'
+	// 				+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+	// 				+ letter + ': '
+	// 				+ questions[i].answers[letter]
+	// 			+ '</label>'
+	// 		);
+	// 	}
 
-		// add this question and its answers to the output
-		output.push(
-			'<div class="question">' + questions[i].question + '</div>'
-			+ '<div class="answers">' + answers.join('') + '</div>'
-		);
-	}
+	// 	// add this question and its answers to the output
+	// 	output.push(
+	// 		'<div class="question">' + questions[i].question + '</div>'
+	// 		+ '<div class="answers">' + answers.join('') + '</div>'
+	// 	);
+	// }
+
+    function showQuestions(){
+        console.log('run')
+        console.log('yey', myQuestions)
+        // we'll need a place to store the output and the answer choices
+        var output = [];
+        var answers;
+    
+        // for each question...
+        for(var i=0; i<myQuestions.length; i++){
+            
+            // first reset the list of answers
+            answers = [];
+    
+            // for each available answer to this question...
+            for(letter in myQuestions[i].answers){
+    
+                // ...add an html radio button
+                answers.push(
+                    '<label>'
+                        + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                        + letter + ': '
+                        + myQuestions[i].answers[letter]
+                    + '</label>'
+                );
+            }
+    
+            // add this question and its answers to the output
+            output.push(
+                '<div class="question">' + myQuestions[i].question + '</div>'
+                + '<div class="answers">' + answers.join('') + '</div>'
+            );
+        }
+    
+        // finally combine our output list into one string of html and put it on the page
+        quizContainer.innerHTML = output.join('');
+    }
 
 	// finally combine our output list into one string of html and put it on the page
 	quizContainer.innerHTML = output.join('');
 }
-// showQuestions(questions, quizContainer);
+showQuestions(questions, quizContainer);
 
 function showResults(questions, quizContainer, resultsContainer){
 	
@@ -118,10 +161,6 @@ function showResults(questions, quizContainer, resultsContainer){
 // submitButton.click = function(){
 	// showResults(questions, quizContainer, resultsContainer);
 // }
-
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
