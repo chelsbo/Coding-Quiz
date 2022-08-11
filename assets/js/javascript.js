@@ -1,4 +1,6 @@
-// var button = document.createElement("button");
+var button = document.createElement("button");
+
+button.onclick = myFunction;
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
