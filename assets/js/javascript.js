@@ -29,7 +29,7 @@ startBtn.addEventListener("click", generateQuiz);
 
 // startBtn.onclick = myFunction;
 
-// function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 	// function showQuestions(questions, quizContainer){
 	// 	// code will go here
@@ -48,9 +48,6 @@ startBtn.addEventListener("click", generateQuiz);
 	// submitButton.click = function(){
 		showResults(questions, quizContainer, resultsContainer);
 	
-
-
-
 function showQuestions(questions, quizContainer){
 	// we'll need a place to store the output and the answer choices
 	// var output = [];
@@ -160,7 +157,7 @@ function showResults(questions, quizContainer, resultsContainer){
 
 // submitButton.click = function(){
 	// showResults(questions, quizContainer, resultsContainer);
-// }
+}
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
