@@ -8,7 +8,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 	function showQuestions(questions, quizContainer){
 		// code will go here
-        What is ?
+    //    question:  "What is ?"
 	}
 
 	function showResults(questions, quizContainer, resultsContainer){
