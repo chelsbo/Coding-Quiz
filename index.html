@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <title>Coding Quiz</title>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
     <header>
-        <h1>View High Scores</h1>
-        <div id="timer">
-            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+        <div>
+            <button class="btnHeader" id="view-high-scores">View High Scores</button>
         </div>
+        <div>
+            <p>Time: <span id="timeLeft">xxx</span></p>
+        </div>
+         
     </header>
-    <body>
-        <div id="quiz">
-        <section id="color-box" >
-        <h2>Coding Quiz Challenge</h2>
-            <p>Select the start button below to begin the quiz</p>
-        </section>
-        <button id="start-quiz">Start</button>
-        <div id="quiz">
-            <script src="./assets/js/javascript.js"></script>
-    </body>
-    </html>
+
+        <div id="mainDiv"> 
+            <div id="gridContainer">
+                <p id="questionDisplay">Welcome to our code Quiz!</p>
+                <p id="finalScoreDisplay"></p>
+                <p id="enterInitials"></p>
+                <textarea id=enterInitialsTextArea></textarea>
+                <button class="btn" id="start-quiz">Start Quiz</button>
+                <button class="btn" id="answer1"></button>
+                <button class="btn" id="answer2"></button>
+                <button class="btn" id="answer3"></button>
+                <button class="btn" id="answer4"></button>
+                <button class="btn" id="submitScore"></button> 
+
+            </div>
+            <div id="answerCorrectWrongGrid"></div>
+            <p id=answerCorrectWrong></p>
+            </div>
+
+    </section>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
